@@ -1,0 +1,85 @@
+[ 2015-05-30T19:24:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.047168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.077718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.077987s ]
+NOTIC: [8] Undefined index: user_id D:\virhost\itshop\App\Home\Controller\IndexController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `it_user` [ RunTime:0.191242s ]
+SQL: SELECT * FROM `it_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.001620s ]
+SQL: SHOW COLUMNS FROM `it_category` [ RunTime:0.171105s ]
+SQL: SELECT * FROM `it_category` WHERE ( parent_id=0 )  [ RunTime:0.001242s ]
+SQL: SELECT * FROM `it_category`  [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `it_goods` [ RunTime:0.205272s ]
+SQL: SELECT `goods_name`,`goods_thumb`,`shop_price`,`id` FROM `it_goods` WHERE ( is_best=1 and is_delete=0 and is_sale=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.022892s ]
+SQL: SELECT `goods_name`,`goods_thumb`,`shop_price`,`id` FROM `it_goods` WHERE ( is_new=1 and is_delete=0 and is_sale=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.002366s ]
+SQL: SELECT `goods_name`,`goods_thumb`,`shop_price`,`id` FROM `it_goods` WHERE ( is_hot=1 and is_delete=0 and is_sale=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.002208s ]
+SQL: SHOW COLUMNS FROM `it_cart` [ RunTime:0.318986s ]
+SQL: SELECT * FROM `it_cart` WHERE ( user_id=1 )  [ RunTime:0.001538s ]
+SQL: SHOW COLUMNS FROM `it_goods` [ RunTime:0.013559s ]
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.001304s ]
+SQL: SHOW COLUMNS FROM `it_goods_attr` [ RunTime:0.290800s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in(19) ) LIMIT 1   [ RunTime:0.209891s ]
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 8 LIMIT 1   [ RunTime:0.001095s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in() ) LIMIT 1   [ RunTime:0.000762s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in() ) LIMIT 1  
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 6 LIMIT 1   [ RunTime:0.001338s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in(29,33) ) LIMIT 1   [ RunTime:0.001836s ]
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 6 LIMIT 1   [ RunTime:0.000842s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in(30,35) ) LIMIT 1   [ RunTime:0.001113s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000864s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.557972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.559940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.088529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.088910s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013670s ]
+
+[ 2015-05-30T19:24:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001973s ]
+SQL: SHOW COLUMNS FROM `it_category` [ RunTime:0.049999s ]
+SQL: SELECT * FROM `it_category` WHERE ( parent_id=0 )  [ RunTime:0.001280s ]
+SQL: SELECT * FROM `it_category`  [ RunTime:0.002823s ]
+SQL: SHOW COLUMNS FROM `it_goods` [ RunTime:0.122056s ]
+SQL: SELECT `goods_name`,`goods_thumb`,`shop_price`,`id` FROM `it_goods` WHERE ( is_best=1 and is_delete=0 and is_sale=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.171001s ]
+SQL: SELECT `goods_name`,`goods_thumb`,`shop_price`,`id` FROM `it_goods` WHERE ( is_new=1 and is_delete=0 and is_sale=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.001105s ]
+SQL: SELECT `goods_name`,`goods_thumb`,`shop_price`,`id` FROM `it_goods` WHERE ( is_hot=1 and is_delete=0 and is_sale=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `it_cart` [ RunTime:0.008947s ]
+SQL: SELECT * FROM `it_cart` WHERE ( user_id=1 )  [ RunTime:0.001185s ]
+SQL: SHOW COLUMNS FROM `it_goods` [ RunTime:0.009190s ]
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `it_goods_attr` [ RunTime:0.009498s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in(19) ) LIMIT 1   [ RunTime:0.001420s ]
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 8 LIMIT 1   [ RunTime:0.000902s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in() ) LIMIT 1   [ RunTime:0.000610s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in() ) LIMIT 1  
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 6 LIMIT 1   [ RunTime:0.000788s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in(29,33) ) LIMIT 1   [ RunTime:0.001114s ]
+SQL: SELECT `goods_name`,`shop_price`,`goods_thumb` FROM `it_goods` WHERE `id` = 6 LIMIT 1   [ RunTime:0.000784s ]
+SQL: SELECT group_concat(concat(b.attr_name,':',a.attr_value) separator '<br/>') as string FROM `it_goods_attr` a left join  it_attribute b on a.attr_id=b.id  WHERE ( a.id in(30,35) ) LIMIT 1   [ RunTime:0.001003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000375s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000578s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001889s ]
+
